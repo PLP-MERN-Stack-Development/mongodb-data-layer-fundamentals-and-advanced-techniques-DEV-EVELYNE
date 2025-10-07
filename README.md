@@ -1,59 +1,59 @@
-# MongoDB Fundamentals - Week 1
+# PLP Bookstore - Node.js & MongoDB Project
 
-## Setup Instructions
+A Node.js project demonstrating interaction with a MongoDB database.  
+This project includes scripts to populate a database with sample book data, perform CRUD operations, and run queries. It follows best practices for environment management and version control.
 
-Before you begin this assignment, please make sure you have the following installed:
+---
 
-1. **MongoDB Community Edition** - [Installation Guide](https://www.mongodb.com/docs/manual/administration/install-community/)
-2. **MongoDB Shell (mongosh)** - This is included with MongoDB Community Edition
-3. **Node.js** - [Download here](https://nodejs.org/)
+## Table of Contents
 
-### Node.js Package Setup
+- [Project Overview](#project-overview)  
+- [Project Structure](#project-structure)  
+- [Prerequisites](#prerequisites)  
+- [Installation](#installation)  
+- [Environment Variables](#environment-variables)  
+- [Database Connection](#database-connection)  
+- [Scripts](#scripts)  
+- [Example Queries](#example-queries)  
+- [Git & Version Control](#git--version-control)  
+- [Notes](#notes)  
+- [License](#license)  
 
-Once you have Node.js installed, run the following commands in your assignment directory:
+---
 
-```bash
-# Initialize a package.json file
-npm init -y
+## Project Overview
 
-# Install the MongoDB Node.js driver
-npm install mongodb
-```
+This project demonstrates:
 
-## Assignment Overview
+- Connecting to MongoDB (local or Atlas) using Node.js  
+- Populating a collection with predefined book data (`insert_books.js`)  
+- Performing CRUD operations on the books collection (`crud.js`)  
+- Organizing code with a reusable database connection module (`db.js`)  
+- Writing queries to find, filter, and sort books (`queries.js`)  
 
-This week focuses on MongoDB fundamentals including:
-- Creating and connecting to MongoDB databases
-- CRUD operations (Create, Read, Update, Delete)
-- MongoDB queries and filters
-- Aggregation pipelines
-- Indexing for performance
+The `books` collection contains the following fields:
 
-## Submission
+- `title`  
+- `author`  
+- `genre`  
+- `published_year`  
+- `price`  
+- `in_stock`  
+- `pages`  
+- `publisher`  
 
-Complete all the exercises in this assignment and push your code to GitHub using the provided GitHub Classroom link.
+---
 
-## Getting Started
-
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install MongoDB locally or set up a MongoDB Atlas account
-4. Run the provided `insert_books.js` script to populate your database
-5. Complete the tasks in the assignment document
-
-## Files Included
-
-- `Week1-Assignment.md`: Detailed assignment instructions
-- `insert_books.js`: Script to populate your MongoDB database with sample book data
-
-## Requirements
-
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- MongoDB Shell (mongosh) or MongoDB Compass
-
-## Resources
-
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [MongoDB University](https://university.mongodb.com/)
-- [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
+## Project Structure
+PLP-Bookstore/
+│
+├── .gitignore # Excludes node_modules, .env, etc.
+├── .env # Environment variables (not pushed)
+├── package.json # Project metadata and dependencies
+├── package-lock.json # Locked dependency versions
+├── insert_books.js # Script to populate books collection
+├── crud.js # CRUD operations on the books collection
+├── db.js # MongoDB connection module
+├── queries.js # Example MongoDB queries
+├── sceenshot.png # Screenshots or visual reference
+└── node_modules/ # Installed npm packages (not pushed)
